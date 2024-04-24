@@ -49,7 +49,7 @@ const Hero = () => {
       </div>
       
       <div className="hero__image-container">         
-        <div className="hero__image min-[768px]:max-[1280px]:-mb-14 min-[768px]:max-[1280px]:-mr-20">
+        <div className="hero__image min-[768px]:max-[1280px]:-mb-14">
           <ImageSlideshow    
             images={images}
           />
