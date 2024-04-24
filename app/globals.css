@@ -1,33 +1,275 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Manrope", sans-serif;
+  overflow: overflow-x-hidden;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+/* GENERAL - START */
+.max-width {
+  @apply max-w-[1440px] mx-auto;
+}
+
+.padding-x {
+  @apply sm:px-16 px-6;
+}
+
+.padding-y {
+  @apply py-4;
+}
+
+.flex-center {
+  @apply flex items-center justify-center;
+}
+
+.flex-between {
+  @apply flex justify-between items-center;
+}
+
+.custom-btn {
+  @apply flex flex-row relative justify-center items-center py-3 px-6 outline-none;
+}
+/* GENERAL - END */
+
+/* NAV - START */
+.nav__title {
+  @apply min-[320px]:max-[425px]:mt-2;
+}
+/* NAV SECTION - END */
+
+/* HERO SECTION - START */
+.hero {
+  @apply flex xl:flex-row flex-col gap-5 relative z-0 max-w-[1440px] mx-auto;
+}
+
+.hero__title {
+  @apply 2xl:w-3/4 2xl:text-[72px] sm:text-[64px] text-[50px] font-extrabold min-[320px]:max-[425px]:-mt-14;
+}
+
+.hero__subtitle {
+  @apply text-[24px] text-black-100 font-normal mt-5;
+}
+
+.hero__create-account {
+  @apply text-black bg-green-300 border border-black border-solid font-bold rounded-xl min-w-[110px] mt-6;
+}
+
+.hero__view-cars {
+  @apply md:w-1/2 xl:w-3/4 rounded-xl mt-10 ml-2 font-semibold shadow-xl bg-primary-blue text-white border border-black border-solid hover:bg-green-300 hover:text-black xl:text-[25px] min-[320px]:max-[768px]:mt-5; 
+}
+
+.hero__image-container {
+  @apply xl:flex-[1.5] flex justify-end items-end w-full xl:h-screen overflow-x-hidden;
+}
+
+.hero__image {
+  @apply relative xl:w-full w-[90%] xl:h-full h-[590px] z-0 min-[320px]:max-[425px]:mt-10;
+}
+
+.hero__image-overlay {
+  @apply absolute xl:-top-24 xl:-right-[42.5%] -right-1/4 bg-hero-bg bg-repeat-round -z-10 w-full xl:h-screen h-[590px] overflow-hidden max-[768px]:-right-0;
+}
+
+.imageSlideshow {
+  @keyframes fade {
+    from { opacity: 0}
+    to {opacity: 1}
   }
 }
+/* HERO SECTION - END */       
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+/* SIGN UP COMPONENT - START */
+.sign-up__container {
+  @apply flex flex-col h-1/2 w-1/3 py-20 justify-center items-center -mt-10 bg-white border-[2.75px] border-slate-900 border-solid shadow-xl rounded-[5%] overflow-x-hidden max-[460px]:py-20 min-[320px]:max-[425px]:py-10 min-[320px]:max-[425px]:w-full min-[320px]:max-[768px]:w-5/6 min-[768px]:max-[1024px]:w-[50%] min-[1024px]:max-[1280px]:w-1/3 min-[1280px]:w-[30%];
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.sign-up__close {
+  @apply absolute top-0 right-0 text-white text-[20px] rounded-full mt-3 mr-3 min-[320px]:max-[425px]:text-[14px] min-[320px]:max-[425px]:-mt-[0px] min-[320px]:max-[425px]:-mr-[5px] min-[375px]:max-[425px]:-mt-[0px] min-[375px]:max-[425px]:-mr-[0px];
 }
+
+.sign-up__form {
+  @apply mt-1 space-y-6 min-[320px]:max-[425px]:text-[12px];
+} 
+
+.sign-up__title, .sign-in__title {
+  @apply mb-5 font-bold text-black text-[32px] text-center grid place-content-center min-[320px]:max-[425px]:text-[24px];
+}
+
+.sign-up__input {
+  @apply flex flex-wrap border border-black border-solid rounded-lg my-4 p-3 placeholder:pl-0 w-full min-[320px]:max-[425px]:text-[12px];
+}
+
+.sign-up__error-message {
+  @apply text-red-600 text-[14px] -mt-3;
+}
+
+.sign-up__success-message {
+  @apply flex justify-center items-center text-black text-[16px] mt-4 p-0; 
+}
+/* SIGN UP COMPONENT - END */
+
+/* HOME - START */
+.home__text-container {
+  @apply flex flex-col items-start justify-start gap-y-2.5 text-black-100 overflow-x-hidden;
+}
+
+.home__filters {
+  @apply mt-12 w-full flex-between items-center flex-wrap gap-5;
+}
+
+.home__filter-container {
+  @apply flex justify-start flex-wrap items-center gap-2;
+}
+
+.home__cars-wrapper {
+  @apply grid 2xl:grid-cols-4 xl:grid-cols-3 md:grid-cols-2 grid-cols-1 w-full gap-8 pt-14;
+}
+
+.home__error-container {
+  @apply mt-16 flex justify-center items-center flex-col gap-2;
+}
+/* HOME - END */
+
+/* CAR CARD - START */
+.car-card {
+  @apply flex flex-col p-6 justify-center items-start text-black-100 bg-primary-blue-100 hover:bg-white hover:shadow-md rounded-3xl max-[460px]:py-20 min-[460px]:max-[768px]:py-20;
+}
+
+.car-card__content {
+  @apply w-full flex justify-between items-start gap-2;
+}
+
+.car-card__content-title {
+  @apply text-[22px] leading-[26px] font-bold capitalize max-[460px]:-mt-16 min-[460px]:max-[768px]:-mt-16;
+}
+
+.car-card__price {
+  @apply flex mt-6 text-[32px] leading-[38px] font-extrabold;
+}
+
+.car-card__price-content {
+  @apply bg-green-300 shadow-xl rounded-xl pt-2 pb-2 pl-3 pr-3 mt-8 mb-4 min-[320px]:max-[375px]:mt-4 min-[375px]:max-[460px]:-mt-2 min-[460px]:max-[767px]:-mt-7;
+}
+
+.car-card__price-dollar {
+  @apply self-start text-[14px] leading-[17px] font-semibold;
+}
+
+.car-card__price-day {
+  @apply self-end text-[14px] leading-[17px] font-medium;
+}
+
+.car-card__image {
+  @apply relative w-full h-40 my-3 object-contain max-[460px]:-mt-1 min-[460px]:max-[768px]:-mt-2;
+}
+
+.car-card__icon-container {
+  @apply flex group-hover:invisible w-full justify-between text-grey overflow-x-hidden;
+}
+
+.car-card__icon {
+  @apply flex flex-col justify-center items-center gap-2 max-[460px]:-mt-7 min-[460px]:max-[768px]:-mt-10;
+}
+
+.car-card__icon-text {
+  @apply text-[14px] leading-[17px];
+}
+
+.car-card__btn-container {
+  @apply group-hover:flex absolute bottom-0 w-full z-10 overflow-x-hidden min-[768px]:hidden max-[460px]:-mb-16 min-[460px]:max-[768px]:-mb-16;
+}
+/* CAR CARD - END */
+
+/* CAR DETAILS - START */
+.car-details__dialog-panel {
+  @apply relative w-full max-w-lg max-h-[90vh] overflow-y-auto transform rounded-2xl bg-white p-6 text-left shadow-xl transition-all flex flex-col gap-5;
+}
+
+.car-details__close-btn {
+  @apply absolute top-2 right-2 z-10 w-fit p-2 bg-primary-blue-100 rounded-full;
+}
+
+.car-details__main-image {
+  @apply relative w-full h-40 bg-pattern bg-cover bg-center rounded-lg;
+}
+/* CAR DETAILS - END */
+
+/* CUSTOM FILTER - START*/
+.custom-filter__btn {
+  @apply relative w-full min-w-[127px] flex justify-between items-center cursor-default rounded-lg bg-white py-2 px-3 text-left shadow-md sm:text-sm border;
+}
+
+.custom-filter__options {
+  @apply absolute mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm;
+}
+/* CUSTOM FILTER - END */
+
+/* FOOTER - START */
+.footer {
+  @apply flex flex-col text-black-100  mt-5 border-t border-gray-100 overflow-hidden;
+}
+
+.footer__links-container {
+  @apply flex max-md:flex-col flex-wrap justify-between gap-5 sm:px-16 px-6 py-10 overflow-x-hidden;
+}
+
+.footer__rights {
+  @apply flex flex-col justify-start items-start gap-6;
+}
+
+.footer__links {
+  @apply flex-1 w-full flex md:justify-end flex-wrap max-md:mt-10 gap-20;
+}
+
+.footer__link {
+  @apply flex flex-col gap-6 text-base min-w-[170px];
+}
+
+.footer__copyrights {
+  @apply flex justify-between items-center flex-wrap mt-10 border-t border-gray-100 sm:px-16 px-6 py-10;
+}
+
+.footer__copyrights-link {
+  @apply flex sm:justify-end justify-center max-sm:mt-4 gap-10 max-[425px]:text-[12px] max-[425px]:gap-5;
+}
+/* FOOTER - END */
+
+/* SEARCH MANUFACTURER - START */
+.search-manufacturer {
+  @apply flex-1 max-sm:w-full flex justify-start items-center;
+}
+
+.search-manufacturer__input {
+  @apply w-full h-[48px] pl-14 p-4 -mt-[1px] rounded-l-full max-sm:rounded-full bg-light-white outline-none cursor-pointer text-sm min-[640px]:border-r-[1px];
+}
+
+.search-manufacturer__options {
+  @apply absolute mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm;
+}
+
+.search-manufacturer__option {
+  @apply cursor-default select-none py-2 pl-10 pr-4;
+}
+/* SEARCH MANUFACTURER - End */
+
+/* SEARCHBAR - START */
+.searchbar {
+  @apply flex items-center justify-start max-sm:flex-col w-full relative max-sm:gap-4 max-w-3xl;
+}
+
+.searchbar__manufacturer, 
+.searchbar__model {
+  @apply flex-1 max-sm:w-full flex justify-start items-center relative;
+}
+
+.searchbar__input {
+  @apply w-full h-[48px] pl-14 p-4 pt-[18px] -mt-[1px] bg-light-white rounded-r-full max-sm:rounded-full outline-none cursor-pointer text-sm;
+}
+/* SEARCHBAR - END */
