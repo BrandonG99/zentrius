@@ -18,7 +18,7 @@ export default async function Home({ searchParams }: HomeProps) {
     <main>
       <Hero />
 
-      <div className="mt-12 padding-x padding-y max-width" id="discover">
+      <div className="mt-12 padding-x padding-y max-width" id="explore-cars">
         <div className="home__text-container">
           <h1 className="text-4xl font-extrabold">Explore our <span className="text-primary-blue">wide range</span> of cars</h1>
           <p>Enter a <span className="text-primary-blue -mb-1">car brand</span> and <span className="text-primary-blue">car model</span> below</p>
