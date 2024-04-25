@@ -17,6 +17,18 @@ Zentrius is a car rental application that offers a seamless and hassle-free plat
 
 [Back To The Top](#zentrius)
 
+## TECH STACK
+
+- HTML5
+- CSS3
+- Tailwind
+- JavaScript
+- TypeScript
+- Next.js
+- React
+
+[Back To The Top](#zentrius)
+
 ## FEATURES
 
 👉 **Search Functionality**:
@@ -85,22 +97,6 @@ Below the currently displayed results, there is a 'Show More Cars' button that u
 Utilised TypeScript to provide robust typing and improve code quality, helping to prevent bugs.
 
 [Back To The Top](#zentrius)
-
----
-
-## TECH STACK
-
-- HTML5
-- CSS3
-- Tailwind
-- JavaScript
-- TypeScript
-- Next.js
-- React
-
-[Back To The Top](#zentrius)
-
----
 
 ## Author Info
 
