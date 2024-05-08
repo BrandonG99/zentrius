@@ -76,7 +76,7 @@ const Login: React.FC<LoginProps> = ({ onClose }) => {
   return (
     <>
       <div className={"flex justify-center items-center mt-20"}>
-        <div className="sign-up__container relative">
+        <div className="sign-up__container relative min-[320px]:max-[768px]:-mt-36">
           <div className="sign-up__close">
             <CustomButton 
               title="X"
