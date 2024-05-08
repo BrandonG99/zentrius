@@ -46,7 +46,7 @@ const SearchManufacturer = ({ manufacturer, setManufacturer }: SearchManufacture
             afterLeave={() => setQuery("")}
           > 
 
-            <Combobox.Options className="custom-filter__options">
+            <Combobox.Options className="custom-filter__options z-30">
               {filteredManufacturers.length === 0 && query !== "" ? (
                 <div className="relative cursor-default select-none px-4 py-2 text-gray-700">
                   We could not find the car brand <span className="text-primary-blue font-bold">'{query}'</span> in our collection.
