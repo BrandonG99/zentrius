@@ -76,8 +76,8 @@ const Login: React.FC<LoginProps> = ({ onClose }) => {
   return (
     <>
       <div className={"flex justify-center items-center mt-20"}>
-        <div className="sign-up__container relative min-[320px]:max-[768px]:-mt-36">
-          <div className="sign-up__close">
+        <div className="login__container relative min-[320px]:max-[768px]:-mt-36">
+          <div className="login__close">
             <CustomButton 
               title="X"
               btnType="button"
@@ -85,9 +85,9 @@ const Login: React.FC<LoginProps> = ({ onClose }) => {
               handleClick={handleCloseLogIn}
             />
           </div>
-          <form className="sign-in__form">
+          <form className="login__form">
             <div>
-              <h2 className="sign-in__title">LOG IN</h2>
+              <h2 className="login__title">LOG IN</h2>
               <input 
                 type="text" 
                 id="username"
@@ -95,11 +95,11 @@ const Login: React.FC<LoginProps> = ({ onClose }) => {
                 placeholder="Username"
                 value={formData.username}
                 onChange={handleInputChange}
-                className="sign-up__input"
+                className="login__input"
                 required
               />
               {invalidUsername && (
-                <p className="sign-up__error-message">{invalidUsername}</p>
+                <p className="login__error-message">{invalidUsername}</p>
               )}
             </div>
             <div>
@@ -110,11 +110,11 @@ const Login: React.FC<LoginProps> = ({ onClose }) => {
                 placeholder="Password"
                 value={formData.password}
                 onChange={handleInputChange}
-                className="sign-up__input"
+                className="login__input"
                 required
               />
               {invalidPassword && (
-                <p className="sign-up__error-message">{invalidPassword}</p>
+                <p className="login__error-message">{invalidPassword}</p>
               )}
             </div>
             <div>
@@ -127,7 +127,7 @@ const Login: React.FC<LoginProps> = ({ onClose }) => {
               />
 
               {showSuccessMessage && (
-                <p className="sign-up__success-message">
+                <p className="login__success-message">
                   You are now logged in!
                 </p>
               )}
