@@ -8,7 +8,8 @@ export async function fetchCars(filters: FilterProps) {
     'X-RapidAPI-Host': 'cars-by-api-ninjas.p.rapidapi.com'
   }
 
-  const response = await fetch(`https://cars-by-api-ninjas.p.rapidapi.com/v1/cars?manufacturer=${manufacturer}&model=${model}&fuel_type=${fuel}&year=${year}&limit=${limit}`, 
+  const response = await fetch(
+    `https://cars-by-api-ninjas.p.rapidapi.com/v1/cars?manufacturer=${manufacturer}&model=${model}&fuel_type=${fuel}&year=${year}&limit=${limit}`, 
     {
       headers: headers,
     }
